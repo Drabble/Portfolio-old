@@ -102,15 +102,19 @@ section {
 	padding-top: 60px;
 }
 .skills {
-	display: -webkit-inline-flex;
-	justify-content: flex-start;
-	align-content: flex-start;
-	flex-wrap: wrap;word-break: break-word;
+	display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
 	padding: 20px 60px 60px 60px;
+    justify-content: space-between;
 }
 .skills span {
-	flex: 1 1 auto;
 	padding: 10px;
+	max-width: 100%;
+    text-decoration: none;
+    flex: 1 0 auto;
+	word-break: break-all;
 }
 
 /* Education */
@@ -181,6 +185,11 @@ section {
 	background-color: #69D870;
 }
 
+/* Photography */
+#skateboarding {
+	background-color: #97247F;
+}
+
 /* Project */
 .project_section img {
 	width: 200px;
@@ -208,7 +217,10 @@ section {
 }
 .images img {
 	max-width: 400px;
-	padding: 10px;
+	padding: 1px;
+}
+.images iframe {
+	padding: 1px;
 }
 
 /* Footer */
