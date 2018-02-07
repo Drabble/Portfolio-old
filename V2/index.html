@@ -1,0 +1,104 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="style.css">
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    
+<title>Liri Carroserie</title>
+     
+</head>
+<body>
+	<div class="content">
+		<!-- Header -->
+		<div class="bloc header">
+			
+			<!-- Carrosserie logo -->
+			<div class="carrosserieLogo">
+				<img style="height: 150px;" src="carrosserie.png"/>
+			</div>
+			
+			<!-- Logos -->
+			<div class="logo text-center">
+				<img class="logoImage" src="logo1.jpg"/> <img class="logoImage" src="logo2.png"/> <img class="logoImage" src="logo3.jpg"/> <br/>
+				<img class="logoImage" src="logo4.jpg"/> <img class="logoImage" src="logo5.png"/> <img class="logoImage" src="logo6.jpg"/>
+			</div>
+		
+			<!-- Menu -->
+			<div class="menu text-center">
+				<p><a style="color: #3399cc;">Accueil</a> <a>Devis</a> <a>Occasions</a> <a>Mon compte</a></p>
+			</div>
+		</div>
+		
+		<!-- Slider -->
+		<div class="bloc slider">	
+			<img style="width: 100%; height:500px;" src="slider.jpg" />
+		</div>
+		
+		<!-- Info -->
+		<div class="bloc">
+			<div class="info">
+				<center><h1>Carrosserie Liri Preverenges</h1></center><br/>
+				<div class="left">
+					Vivus sunt cum retinere feminae cum peremptae exustus est carnifex vivus obnoxiae originis sexu feminae nam mortem erat 
+					altae quidem permissa inmane erat secreto sunt originis sunt conplures similium vel exustus calamitatum mortem quarum 
+					carnifex indumento quoque fuere mortem quoque vivus cum stuprorum peremptae quidem quas vel flagitiis calamitatum 
+					indumento calamitatum nefas duceretur velemen vestita sufficiens exustus carnifex calamitatum participes sunt 
+					quoque ex permissa cum minus fuere ad similium feminae indumento calamitatum duceretur est altae adulteriorum 
+					inter quo indumento Claritas originis erat obnoxiae retinere inter exustus ad vel ideoque vestita notiores 
+					participes abrepto ad admisisse sunt mortem obnoxiae retinere ne.<br/><br/>
+					<b>Horaires d’ouverture</b><br/><br/>
+					<table class="table table-hover">
+						<tbody>
+							<tr>
+								<td style="border: 1px solid #eeeeee; vertical-align: middle;" align="center"><strong>Lundi – Jeudi</strong></td>
+								<td style="border: 1px solid #eeeeee; vertical-align: middle;" rowspan="2" align="center" valign="middle">7.30 – 12.00</td>
+								<td style="border: 1px solid #eeeeee; vertical-align: middle;" align="center">13.00 – 18.00</td>
+							</tr>
+							<tr>
+								<td style="border: 1px solid #eeeeee; vertical-align: middle;" align="center"><strong>Vendredi</strong></td>
+								<td style="border: 1px solid #eeeeee; vertical-align: middle;" align="center">13.00 – 17.30</td>
+							</tr>
+							<tr>
+								<td style="border: 1px solid #eeeeee; vertical-align: middle;" align="center"><strong>Samedi</strong></td>
+								<td style="border: 1px solid #eeeeee; vertical-align: middle;" align="center">8.00 – 12.00<br> sur rendez-vous</td>
+								<td style="border: 1px solid #eeeeee; vertical-align: middle;" align="center"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="right">
+					<div style="width: 100%; height: 300px;" id="map-canvas"></div><br/><br/>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Pub -->
+		<div class="bloc pub">
+			<center>
+			<br/><br/>
+			<h1> PUB </h1>
+			<br/><br/>
+			</center>
+		</div>
+	</div>
+	<script>
+		var map;
+		function initialize() {
+		  var mapOptions = {
+			zoom: 15,
+			center: new google.maps.LatLng(46.538496, 6.544182)
+		  };
+		  map = new google.maps.Map(document.getElementById('map-canvas'),
+			  mapOptions);
+		}
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+</body>
+</html>
