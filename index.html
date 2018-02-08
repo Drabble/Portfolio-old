@@ -11,6 +11,7 @@
 		<script src="assets/js/magnific-popup.js"></script>
 		<script src="assets/js/animatable.js"></script>
 		<script src="assets/js/unveil.js"></script>
+		<script src="assets/js/particles.js"></script>
 	</head>
 	<body>	
 		<a href="#menu" id="goto_top"><img src="assets/img/logo.png" data-src="assets/img/goto_top.png"/></a>
@@ -1251,6 +1252,11 @@
 			  $(this).load(function() {
 				this.style.opacity = 1;
 			  });
+			});
+			
+			/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+			particlesJS.load('top', 'assets/js/particles.json', function() {
+			  console.log('callback - particles.js config loaded');
 			});
 		});
 	</script>
