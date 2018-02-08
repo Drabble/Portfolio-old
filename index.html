@@ -16,7 +16,7 @@
 	<body>	
 		<a href="#menu" id="goto_top"><img src="assets/img/logo.png" data-src="assets/img/goto_top.png"/></a>
 		<section id="top">
-			<div class="content top">
+			<div class="content top" id="particles-js">
 				<div class="square"></div>
 				<div class="title">
 					<h1>ANTOINE</h1>
@@ -1254,8 +1254,8 @@
 			  });
 			});
 			
-			/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-			particlesJS.load('top', 'assets/js/particles.json', function() {
+			// Particles at the top
+			particlesJS.load('particles-js', 'assets/js/particles.json', function() {
 			  console.log('callback - particles.js config loaded');
 			});
 		});
