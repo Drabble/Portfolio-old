@@ -33,6 +33,14 @@ section {
 	justify-content: center;
 }
 img:hover { cursor: pointer; }
+img {
+  opacity: 0;
+  transition: opacity .5s ease-in;
+} 
+iframe {
+  opacity: 0;
+  transition: opacity .5s ease-in;
+} 
 
 /* Top */
 #top {
