@@ -1241,12 +1241,12 @@
 			});
 			
 			// Lazy load images
-			$("img").unveil(200, function() {
+			$("img").unveil(500, function() {
 			  $(this).load(function() {
 				this.style.opacity = 1;
 			  });
 			});
-			$("iframe").unveil(200, function() {
+			$("iframe").unveil(500, function() {
 			  $(this).load(function() {
 				this.style.opacity = 1;
 			  });

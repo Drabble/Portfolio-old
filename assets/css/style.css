@@ -37,6 +37,9 @@ img {
   opacity: 0;
   transition: opacity .5s ease-in;
 } 
+figure img {
+  opacity: 1;
+} 
 iframe {
   opacity: 0;
   transition: opacity .5s ease-in;
