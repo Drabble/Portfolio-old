@@ -242,6 +242,10 @@ canvas, #top, .top{
 	max-width: 400px;
 	padding: 1px;
 }
+.images video {
+	max-width: 400px;
+	padding: 1px;
+}
 .images iframe {
 	padding: 1px;
 }
