@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Antoine Drabble</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<link rel="icon" type="image/png" href="assets/img/logo.png" />
+		<link rel="stylesheet" href="assets/css/magnific-popup.css">
+		<link rel="stylesheet" href="assets/css/animatable.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="assets/js/magnific-popup.js"></script>
+		<script src="assets/js/animatable.js"></script>
+		<script src="assets/js/unveil.js"></script>
+		<script src="assets/js/particles.js"></script>
+	</head>
+	<body>	
+		<a href="#top" id="goto_top"><img src="assets/img/logo.png" data-src="assets/img/goto_top.png"/></a>
+		
+		<section id="menu">
+			<div class="content menu">
+				<a href="index.html">Home</a> 
+				<a href="games.html">Games</a> 
+				<a href="websites.html">Websites</a> 
+				<a href="softwares.html">Softwares</a> 
+				<a href="designs.html">Designs</a> 
+				<a href="diy.html">DIY</a> 
+				<a href="music.html">Music</a> 
+				<a href="photography.html">Photography</a> 
+			</div>
+		</section>
+		
+		
+		
+		<section id="designs" class="project_section">
+			<div class="content designs">
+				<img src="assets/img/logo.png" data-src="assets/img/designs.png"/>
+				<h1>DESIGNS</h1>
+			</div>
+		</section>
+		
+		<section>
+			<div class="content projects">
+				<div class="project">	
+					<h3>Chicken with Blender (2017)</h3>
+					<img style="max-width: 100%" src="assets/img/logo.png" data-src="Images/Chicken/1.jpg"/>
+				</div>
+				
+				<div class="project">	
+					<h3>StarBall (2016)</h3>
+					<img style="width: 300px; height: 300px; max-width: 100%" src="assets/img/logo.png" data-src="Images/StarBall/1.png"/>
+				</div>
+				
+				<div class="project">	
+					<h3>Majora's Mask (2015)</h3>			
+					<img style="max-width: 100%" src="assets/img/logo.png" data-src="Images/PhotoshopTest/Majora's-Mask2.png"/>		
+				</div>
+				<div class="project">	
+					<h3>Logos (2015)</h3>		
+					<div class="images">		
+						<img src="assets/img/logo.png" data-src="Images/PhotoshopTest/Tree.png"/>	
+						<img src="assets/img/logo.png" data-src="Images/PhotoshopTest/Infinity.png"/>		
+						<img src="assets/img/logo.png" data-src="Images/PhotoshopTest/Hexagone.png"/>	
+						<img src="assets/img/logo.png" data-src="Images/PhotoshopTest/Blend.png"/>		
+						<img src="assets/img/logo.png" data-src="Images/PhotoshopTest/Rise-2.png"/>
+					</div>					
+				</div>
+			</div>
+		</section>
+		
+		<footer>
+			Made by <a href="https://github.com/servietsky777">Antoine Drabble</a> 2018
+		</footer>
+	</body>
+	<script>
+		$(document).ready(function(){
+			
+			/*
+			// Handle anchor links to animate
+			// Select all links with hashes
+			$('a[href*="#"]')
+				// Remove links that don't actually link to anything
+				.not('[href="#"]')
+				.not('[href="#0"]')
+				.click(function(event) {
+					// On-page links
+					if (
+						location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && 
+						location.hostname == this.hostname) {
+							// Figure out element to scroll to
+							var target = $(this.hash);
+							target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+							// Does a scroll target exist?
+							if (target.length) {
+								// Only prevent default if animation is actually gonna happen
+								event.preventDefault();
+								$('html, body').animate({
+									scrollTop: target.offset().top
+								}, 1000, function() {
+									// Callback after animation
+									// Must change focus!
+									var $target = $(target);
+									$target.focus();
+									if ($target.is(":focus")) { // Checking if the target was focused
+										return false;
+									} else {
+										$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+										$target.focus(); // Set focus again
+									};
+								});
+							}
+					}
+			});*/
+
+			// Hide goto top button when scrolling close to top
+			var offset = 900;
+			var duration = 300;
+			jQuery(window).scroll(function() {
+				if (jQuery(this).scrollTop() > offset) {
+					jQuery("#goto_top").fadeIn(duration);
+				} else {
+					jQuery("#goto_top").fadeOut(duration);
+				}
+			});
+			
+			// Add magnific popup library to images
+			$('.project img').magnificPopup({
+				type: 'image',
+				callbacks: {
+					elementParse: function(item) {
+						item.src = item.el.attr('data-src');
+					}
+				},
+				gallery: {
+				  enabled: true
+				}
+			});
+			
+			// Lazy load images
+			$("img").unveil(500, function() {
+			  $(this).load(function() {
+				this.style.opacity = 1;
+			  });
+			});
+			$("iframe").unveil(500, function() {
+			  $(this).load(function() {
+				this.style.opacity = 1;
+			  });
+			});
+			
+			// Particles at the top
+			particlesJS.load('particles-js', 'assets/js/particles.json', function() {
+			  console.log('callback - particles.js config loaded');
+			});
+		});
+	</script>
+</html>														
