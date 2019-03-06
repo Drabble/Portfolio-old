@@ -1,26 +1,24 @@
 body {
-	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	font-family: Consolas, monaco, monospace;
 	margin: 0; 
 	font-weight: 500;
-	background-color: black;
-	background: none;
 }
 h1 {
 	font-size: 3em;
 	display: block;
-	color: #fbfbfb;
+	color: white;
 	font-weight: 300;
+}
+a {
+	font-weight: 700;
+	color: #373B44;
+	position: relative;	
 }
 a:hover{ 
 	opacity: 0.5;
 }
 a:active {
 	opacity: 0.7;
-}
-a {
-	text-decoration: none;
-	font-weight: 500;
-	position: relative;	
 }
 
 section {
@@ -50,8 +48,6 @@ iframe {
 /* Top */
 #top {
 	height: 48vh;
-	background-color: black;
-	
 }
 .top {
 	align-items: center;
@@ -61,10 +57,9 @@ iframe {
 .square {
 	width: 100px;
 	height: 200px;
-	background-color: #fbfbfb;
+	background-color: white;
 	animation: blinker 1s linear infinite;
 }
-
 @keyframes blinker {  
 	from,
 	49.9% {
@@ -97,8 +92,9 @@ canvas, #top, .top{
 }
 /* Menu */
 #menu {
-	background-color: #20262e;
-	height: 4vh;
+	background-color: #1B2833;
+	opacity: 0.8;
+	height: 6vh;
 	position: sticky;
 	top: 0px;
 	z-index: 100;
@@ -108,16 +104,14 @@ canvas, #top, .top{
 	align-content: center;
 	flex-wrap: wrap;
 	height: 100%;
-	color: #fbfbfb;
+	-webkit-user-select: auto;
 }
 .menu a {
+	color: white;
+	text-decoration: none;
 	flex: 0 1 auto;
 	padding: 10px;
-	font-size: 15px;
-	color: #fbfbfb;
-}
-.menu a.active {
-	color: #65a6e1;
+	font-size: 20px;
 }
 .title {
 	line-height: 30px;
@@ -127,12 +121,13 @@ canvas, #top, .top{
 /* Skills */
 #skills {
 	background-color: #080B0F;
-	color: #fbfbfb;
+	color: white;
+	height: 48vh;
 }
 #skills h1 {
 	text-align: center;
 	width: 100%;
-	padding-top: 20px;
+	padding-top: 60px;
 }
 .skills {
 	display: flex;
@@ -152,7 +147,7 @@ canvas, #top, .top{
 
 /* Education */
 #education {
-	background-color: #EEEEEE;
+	background-color: #FFFFFF;
 	color: black;
 	text-align: center;
 }
@@ -183,9 +178,55 @@ canvas, #top, .top{
 	text-align: left;
 }
 
+/* Games */
+#games {
+	background-color: #6494BF;
+}
+
+/* Websites */
+#websites {
+	background-color: #7370C8;
+}
+
+/* Softwares */
+#softwares {
+	background-color: #FFE07C;
+}
+
+/* Designs */
+#designs {
+	background-color: #FFC97C;
+}
+
+/* Diy */
+#diy {
+	background-color: #60C49E;
+}
+
+/* Music */
+#music {
+	background-color: #EE7495;
+}
+
+/* Photography */
+#photography {
+	background-color: #69D870;
+}
+
+/* Photography */
+#skateboarding {
+	background-color: #BC9C7F;
+}
+
 /* Project */
+.project_section img {
+	width: 200px;
+}
+.project_section h1 {
+	font-size: 100px;
+}
 .projects {
-	background-color: #fbfbfb;
+	background-color: white;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
@@ -203,11 +244,11 @@ canvas, #top, .top{
 	flex-wrap: wrap;
 }
 .images img {
-	max-width: 250px;
+	max-width: 400px;
 	padding: 1px;
 }
 .images video {
-	max-width: 250px;
+	max-width: 400px;
 	padding: 1px;
 }
 .images iframe {
@@ -219,7 +260,7 @@ footer {
 	padding: 60px;
 	text-align:center;
 	background-color: #080B0F;
-	color: #fbfbfb;
+	color: white;
 }
 footer a{
 	color: #436380;
