@@ -156,7 +156,18 @@ canvas, #top, .top{
 	color: black;
 	text-align: center;
 }
+#experience {
+	background-color: #DDDDDD;
+	color: black;
+	text-align: center;
+}
 #education h1 {
+	text-align: center;
+	width: 100%;
+	padding-top: 60px;
+	color: black;
+}
+#experience h1 {
 	text-align: center;
 	width: 100%;
 	padding-top: 60px;
@@ -196,22 +207,41 @@ canvas, #top, .top{
 	font-size: 100px;
 }
 .images {
-	display: flex;
-	justify-content: flex-start;
-	align-items: flex-start;
-	align-content: flex-start;
-	flex-wrap: wrap;
+	column-width: 300px;
+	column-gap: 15px;
+	width: 100%;
+	max-width: 3000px;
+	margin: 50px auto;
 }
 .images img {
-	max-width: 250px;
+	width: 100%;	
 	padding: 1px;
+	
+	padding-bottom: 10px;
+	transition: opacity .4s ease-in-out;
+	display: inline-block;
+	column-break-inside: avoid;
+}
+.images img:hover{
+	transform: scale(1.1, 1.1);
 }
 .images video {
-	max-width: 250px;
+	width: 100%;	
 	padding: 1px;
+	
+	padding-bottom: 10px;
+	transition: opacity .4s ease-in-out;
+	display: inline-block;
+	column-break-inside: avoid;
+}
+.images video:hover{
+	transform: scale(1.1, 1.1);
 }
 .images iframe {
 	padding: 1px;
+}
+.images iframe:hover{
+	transform: scale(1.1, 1.1);
 }
 
 /* Footer */

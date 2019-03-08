@@ -41,44 +41,26 @@
 		<section>
 			<div class="content projects">
 				<div class="project">	
-					<h3>Logos (2018)</h3>		
-					<div class="images">		
+					<h3>Logos (2017-2019)</h3>		
+					<div class="images" style="column-width: 180px;">		
 						<img src="assets/img/logo.png" data-src="Images/Ramble/0.png"/>	
 						<img src="assets/img/logo.png" data-src="Images/Ramble/125.png"/>	
 						<img src="assets/img/logo.png" data-src="Images/Ramble/124.png"/>	
 						<img src="assets/img/logo.png" data-src="Images/Ramble/128.png"/>	
+						<img src="assets/img/logo.png" data-src="Images/Quest/1.png"/>	
+						<img src="assets/img/logo.png" data-src="Images/StarBall/1.png"/>
+						<img src="assets/img/logo.png" data-src="Images/BikeTracks/3.png"/>	
+						<img src="assets/img/logo.png" data-src="Images/PhotoshopTest/Tree.png"/>	
+						<img src="assets/img/logo.png" data-src="Images/PhotoshopTest/Infinity.png"/>		
+						<img src="assets/img/logo.png" data-src="Images/PhotoshopTest/Hexagone.png"/>	
 					</div>					
-				</div>
-				<div class="project">	
-					<h3>Logos (2017)</h3>		
-					<div class="images">		
-						<img src="assets/img/logo.png" data-src="Images/Quest/1.png"/>		
-						<img width="300px" src="assets/img/logo.png" data-src="Images/BikeTracks/3.png"/>	
-					</div>					
-				</div>
-				<div class="project">	
-					<h3>Chicken with Blender (2017)</h3>
-					<img style="width: 300px; max-width: 100%"src="assets/img/logo.png" data-src="Images/Chicken/1.jpg"/>
-				</div>
-				
-				<div class="project">	
-					<h3>StarBall (2016)</h3>
-					<img style="width: 300px; height: 300px; max-width: 100%" src="assets/img/logo.png" data-src="Images/StarBall/1.png"/>
 				</div>
 				
 				<div class="project">	
 					<h3>Majora's Mask (2015)</h3>			
-					<img style="width: 500px; max-width: 100%"src="assets/img/logo.png" data-src="Images/PhotoshopTest/Majora's-Mask2.png"/>		
-				</div>
-				<div class="project">	
-					<h3>Logos (2015)</h3>		
-					<div class="images">		
-						<img width="300px" src="assets/img/logo.png" data-src="Images/PhotoshopTest/Tree.png"/>	
-						<img width="300px" src="assets/img/logo.png" data-src="Images/PhotoshopTest/Infinity.png"/>		
-						<img width="300px" src="assets/img/logo.png" data-src="Images/PhotoshopTest/Hexagone.png"/>	
-						<img width="300px" src="assets/img/logo.png" data-src="Images/PhotoshopTest/Blend.png"/>		
-						<img width="300px" src="assets/img/logo.png" data-src="Images/PhotoshopTest/Rise-2.png"/>
-					</div>					
+					<div class="images" style="column-width: 500px;">		
+						<img src="assets/img/logo.png" data-src="Images/PhotoshopTest/Majora's-Mask2.png"/>	
+					</div>			
 				</div>
 			</div>
 		</section>
@@ -89,44 +71,6 @@
 	</body>
 	<script>
 		$(document).ready(function(){
-			
-			/*
-			// Handle anchor links to animate
-			// Select all links with hashes
-			$('a[href*="#"]')
-				// Remove links that don't actually link to anything
-				.not('[href="#"]')
-				.not('[href="#0"]')
-				.click(function(event) {
-					// On-page links
-					if (
-						location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && 
-						location.hostname == this.hostname) {
-							// Figure out element to scroll to
-							var target = $(this.hash);
-							target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-							// Does a scroll target exist?
-							if (target.length) {
-								// Only prevent default if animation is actually gonna happen
-								event.preventDefault();
-								$('html, body').animate({
-									scrollTop: target.offset().top
-								}, 1000, function() {
-									// Callback after animation
-									// Must change focus!
-									var $target = $(target);
-									$target.focus();
-									if ($target.is(":focus")) { // Checking if the target was focused
-										return false;
-									} else {
-										$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-										$target.focus(); // Set focus again
-									};
-								});
-							}
-					}
-			});*/
-
 			// Hide goto top button when scrolling close to top
 			var offset = 900;
 			var duration = 300;
@@ -152,17 +96,16 @@
 			});
 			
 			// Lazy load images
-			$("img").unveil(500, function() {
+			$("img").unveil(9000, function() {
 			  $(this).load(function() {
 				this.style.opacity = 1;
 			  });
 			});
-			$("iframe").unveil(500, function() {
+			$("iframe").unveil(9000, function() {
 			  $(this).load(function() {
 				this.style.opacity = 1;
 			  });
 			});
-			
 			// Particles at the top
 			particlesJS.load('particles-js', 'assets/js/particles.json', function() {
 			  console.log('callback - particles.js config loaded');
