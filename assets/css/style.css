@@ -243,6 +243,9 @@ canvas, #top, .top{
 .images iframe:hover{
 	transform: scale(1.1, 1.1);
 }
+#particles-js canvas{
+	height: 50%;
+}
 
 /* Footer */
 footer {
